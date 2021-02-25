@@ -1,3 +1,3 @@
 # lyledot.github.io
 
-Hello?
+Landing page for CSC3224 - Computer Games Development.
