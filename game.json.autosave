@@ -185,6 +185,87 @@
           "identifier": "https://resources.gdevelop-app.com/assets/Foliage Pack (100 assets)/PNG/Retina/White tree (2).png",
           "name": "gdevelop-asset-store"
         }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "snowball_012.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "snowball_012.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "snowball_01-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "snowball_01-1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "snowball_01-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "snowball_01-2.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "snowball_01-3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "snowball_01-3.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "snowball_01-4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "snowball_01-4.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "snowball_01-5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "snowball_01-5.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "snowball_01-6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "snowball_01-6.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "snowball_01-7.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "snowball_01-7.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "snowball_01-static.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "snowball_01-static.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -214,7 +295,7 @@
       ],
       "animations": [
         {
-          "name": "",
+          "name": "snowball_01",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -223,7 +304,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "snowball_01.png",
+                  "image": "snowball_01-1.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -279,7 +360,7 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "snowball_02.png",
+                  "image": "snowball_01-2.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -335,7 +416,7 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "snowball_03.png",
+                  "image": "snowball_01-3.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -391,7 +472,7 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "snowball_04.png",
+                  "image": "snowball_01-4.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -447,7 +528,7 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "snowball_05.png",
+                  "image": "snowball_01-5.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -503,7 +584,7 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "snowball_06.png",
+                  "image": "snowball_01-6.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -560,25 +641,41 @@
               ]
             }
           ]
+        },
+        {
+          "name": "snowball_static",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "snowball_01-static.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
         }
       ]
     }
   ],
   "objectsGroups": [],
-  "variables": [
-    {
-      "name": "obstacleSpeed",
-      "value": "200"
-    },
-    {
-      "name": "obstacleDirection",
-      "value": "270"
-    },
-    {
-      "name": "sizeDecrement",
-      "value": "0.005"
-    }
-  ],
+  "variables": [],
   "layouts": [
     {
       "b": 155,
@@ -607,7 +704,20 @@
         "zoomFactor": 0.6
       },
       "objectsGroups": [],
-      "variables": [],
+      "variables": [
+        {
+          "name": "obstacleDirection",
+          "value": "270"
+        },
+        {
+          "name": "obstacleSpeed",
+          "value": "250"
+        },
+        {
+          "name": "sizeDecrement",
+          "value": "0.002"
+        }
+      ],
       "instances": [
         {
           "angle": 0,
@@ -966,102 +1076,128 @@
       ],
       "events": [
         {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
           "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Initialising obstacle movement.",
-          "comment2": ""
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
+          "folded": true,
+          "name": "Variables",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
             {
-              "type": {
-                "inverted": false,
-                "value": "MoveObjects"
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
               },
-              "parameters": [
-                ""
-              ],
-              "subInstructions": []
+              "comment": "Variables:\n\nobstacleDirection: degree that the global force is applied to (270 degrees = up)\nobstacleSpeed: speed at which obstacles go up\nsizeDecrement: how much to subtact from the scale of the snowball when it collides",
+              "comment2": ""
             },
             {
-              "type": {
-                "inverted": false,
-                "value": "AddForceAL"
-              },
-              "parameters": [
-                "Rock",
-                "GlobalVariable(obstacleDirection)",
-                "GlobalVariable(obstacleSpeed)",
-                ""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "AddForceAL"
-              },
-              "parameters": [
-                "WhiteTree",
-                "GlobalVariable(obstacleDirection)",
-                "GlobalVariable(obstacleSpeed)",
-                ""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "If the snowball collides with any obstaces, it decreases in size.",
-          "comment2": ""
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "BuiltinCommonInstructions::Or"
-              },
-              "parameters": [],
-              "subInstructions": [
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
                 {
                   "type": {
                     "inverted": false,
-                    "value": "CollisionNP"
+                    "value": "DepartScene"
                   },
                   "parameters": [
-                    "Snowball",
-                    "Rock",
-                    "",
-                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "obstacleDirection",
+                    "=",
+                    "270"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "obstacleSpeed",
+                    "=",
+                    "250"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "sizeDecrement",
+                    "=",
+                    "0.002"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "disabled": false,
+          "folded": false,
+          "name": "Scene Initialisation",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Initialising obstacle movement.",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MoveObjects"
+                  },
+                  "parameters": [
                     ""
                   ],
                   "subInstructions": []
@@ -1069,84 +1205,242 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "CollisionNP"
+                    "value": "AddForceAL"
                   },
                   "parameters": [
-                    "Snowball",
+                    "Rock",
+                    "Variable(obstacleDirection)",
+                    "Variable(obstacleSpeed)",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "AddForceAL"
+                  },
+                  "parameters": [
                     "WhiteTree",
-                    "",
-                    "",
+                    "Variable(obstacleDirection)",
+                    "Variable(obstacleSpeed)",
                     ""
                   ],
                   "subInstructions": []
                 }
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "ChangeScale"
-              },
-              "parameters": [
-                "Snowball",
-                "-",
-                "GlobalVariable(sizeDecrement)"
               ],
-              "subInstructions": []
+              "events": []
             }
           ],
-          "events": []
+          "parameters": []
         },
         {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
           "disabled": false,
           "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
+          "name": "Collision Events",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
             {
-              "type": {
-                "inverted": false,
-                "value": "PosY"
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
               },
-              "parameters": [
-                "Rock",
-                "<=",
-                "-200"
+              "comment": "If the snowball collides with any obstaces, it decreases in size.",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::Or"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "Snowball",
+                        "Rock",
+                        "",
+                        "",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "Snowball",
+                        "WhiteTree",
+                        "",
+                        "",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ]
+                }
               ],
-              "subInstructions": []
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeScale"
+                  },
+                  "parameters": [
+                    "Snowball",
+                    "-",
+                    "Variable(sizeDecrement)"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
             }
           ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "MettreY"
-              },
-              "parameters": [
-                "Rock",
-                "=",
-                "900"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
+          "parameters": []
         },
         {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "disabled": false,
+          "folded": true,
+          "name": "Endless Scolling",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "All obstacles move up in the game frame endlessly",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PosY"
+                  },
+                  "parameters": [
+                    "Rock",
+                    "<=",
+                    "-200"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MettreY"
+                  },
+                  "parameters": [
+                    "Rock",
+                    "=",
+                    "900"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
           "disabled": false,
           "folded": false,
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "",
-          "comment2": ""
+          "name": "Snowball Mechanics",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::Or"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "TopDownMovementBehavior::Acceleration"
+                      },
+                      "parameters": [
+                        "Snowball",
+                        "TopDownMovement",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SetAnimationName"
+                  },
+                  "parameters": [
+                    "Snowball",
+                    "\"snowball_static\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ],
+          "parameters": []
         }
       ],
       "layers": [
