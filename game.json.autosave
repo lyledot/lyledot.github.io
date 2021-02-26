@@ -266,6 +266,15 @@
         "name": "snowball_01-static.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Barrier-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Barrier-1.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -701,21 +710,57 @@
         "gridWidth": 32,
         "snap": false,
         "windowMask": false,
-        "zoomFactor": 0.6
+        "zoomFactor": 0.7584
       },
       "objectsGroups": [],
       "variables": [
         {
           "name": "obstacleDirection",
-          "value": "270"
+          "value": ""
         },
         {
           "name": "obstacleSpeed",
-          "value": "250"
+          "value": ""
         },
         {
-          "name": "sizeDecrement",
-          "value": "0.002"
+          "name": "sizeDecrease",
+          "value": ""
+        },
+        {
+          "name": "sizeIncrease",
+          "value": ""
+        },
+        {
+          "name": "score",
+          "value": ""
+        },
+        {
+          "name": "state",
+          "value": ""
+        },
+        {
+          "name": "snowballSpeed",
+          "value": ""
+        },
+        {
+          "name": "speedIncrease",
+          "value": ""
+        },
+        {
+          "name": "speedDecrease",
+          "value": ""
+        },
+        {
+          "name": "snowballSize",
+          "value": ""
+        },
+        {
+          "name": "invincibility",
+          "value": ""
+        },
+        {
+          "name": "invincibilityStateChanged",
+          "value": ""
         }
       ],
       "instances": [
@@ -727,7 +772,7 @@
           "locked": false,
           "name": "SnowBackground",
           "persistentUuid": "e09b3eb6-8d5e-4e3a-8c2b-13b358c463ed",
-          "width": 801,
+          "width": 800,
           "x": 0,
           "y": 0,
           "zOrder": 0,
@@ -738,13 +783,13 @@
         {
           "angle": -75,
           "customSize": true,
-          "height": 89,
+          "height": 37,
           "layer": "",
           "locked": false,
           "name": "Snowball",
           "persistentUuid": "2d00f7da-09a6-4330-ae1b-51477ccccc3c",
-          "width": 118,
-          "x": 333,
+          "width": 49,
+          "x": 375,
           "y": 22,
           "zOrder": 1,
           "numberProperties": [],
@@ -776,8 +821,8 @@
           "name": "ScoreNum",
           "persistentUuid": "4f1d3735-2c3f-4e78-8185-635f82aea0e4",
           "width": 0,
-          "x": 80,
-          "y": 16,
+          "x": 87,
+          "y": 17,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -792,8 +837,8 @@
           "name": "Rock",
           "persistentUuid": "dff6e328-5fd4-419e-a693-92523c1a95e8",
           "width": 62,
-          "x": 71,
-          "y": 580,
+          "x": 60,
+          "y": 840,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -808,8 +853,8 @@
           "name": "Rock",
           "persistentUuid": "a85aec08-75a1-45e7-b9a9-e12300b13339",
           "width": 62,
-          "x": 664,
-          "y": 544,
+          "x": 651,
+          "y": 996,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -824,8 +869,8 @@
           "name": "WhiteTree",
           "persistentUuid": "f550c948-8faf-4bb4-9b70-03ed62dc33d5",
           "width": 64,
-          "x": 549,
-          "y": 319,
+          "x": 536,
+          "y": 767,
           "zOrder": 7,
           "numberProperties": [],
           "stringProperties": [],
@@ -840,8 +885,8 @@
           "name": "WhiteTree",
           "persistentUuid": "455e4a31-03e3-46ed-a056-5bd272523060",
           "width": 64,
-          "x": 209,
-          "y": 171,
+          "x": 178,
+          "y": 605,
           "zOrder": 7,
           "numberProperties": [],
           "stringProperties": [],
@@ -856,8 +901,8 @@
           "name": "Rock",
           "persistentUuid": "61e4ac93-3c5e-4505-a91a-9f2daec4d849",
           "width": 62,
-          "x": 446,
-          "y": 724,
+          "x": 434,
+          "y": 1272,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -866,15 +911,223 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 57,
+          "height": 96,
           "layer": "",
           "locked": false,
           "name": "Rock",
           "persistentUuid": "d4bb5129-0a48-4699-aac4-e9d7cbc06631",
-          "width": 62,
-          "x": 219,
-          "y": 900,
+          "width": 105,
+          "x": 149,
+          "y": 1500,
           "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 120,
+          "layer": "",
+          "locked": false,
+          "name": "WhiteTree",
+          "persistentUuid": "f2bb8bf6-5ebb-44ca-8f53-7da389a2b134",
+          "width": 64,
+          "x": 292,
+          "y": 1009,
+          "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 120,
+          "layer": "",
+          "locked": false,
+          "name": "WhiteTree",
+          "persistentUuid": "02f3791d-4ab0-409a-a16b-47bb16788c04",
+          "width": 64,
+          "x": 650,
+          "y": 1600,
+          "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "PressSpaceToBeginText",
+          "persistentUuid": "4764d867-d058-4115-bf65-7858fb8b0f4f",
+          "width": 0,
+          "x": 276,
+          "y": 171,
+          "zOrder": 8,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "GameOverText",
+          "persistentUuid": "7c3f5831-dfdd-47f1-9cb3-af38aec865e7",
+          "width": 0,
+          "x": 343,
+          "y": 250,
+          "zOrder": 9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "RestartText",
+          "persistentUuid": "b9fe9529-6f9d-4b0b-a810-8b5a5493b592",
+          "width": 0,
+          "x": 275,
+          "y": 330,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "FinalScoreText",
+          "persistentUuid": "311c6cdf-a353-4131-8bb5-c6911a0b4f5f",
+          "width": 0,
+          "x": 297,
+          "y": 289,
+          "zOrder": 11,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "DevControls",
+          "persistentUuid": "27aea3db-590c-40b9-a28d-b4466c0c0444",
+          "width": 0,
+          "x": 9,
+          "y": 532,
+          "zOrder": 12,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "EnabledText",
+          "persistentUuid": "ae55b6bc-e5c7-48e1-9e43-ee967f79f8d5",
+          "width": 0,
+          "x": 168,
+          "y": 571,
+          "zOrder": 13,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "SnowballSizeTest",
+          "persistentUuid": "cb7d1fdb-63bf-4ec1-b1df-0f477b31ae55",
+          "width": 0,
+          "x": 644,
+          "y": 419,
+          "zOrder": 14,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 613,
+          "layer": "",
+          "locked": false,
+          "name": "GameBarrier",
+          "persistentUuid": "bbb973df-7cd0-468f-89c9-d468ef2efbb7",
+          "width": 11,
+          "x": 800,
+          "y": -1,
+          "zOrder": 15,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 613,
+          "layer": "",
+          "locked": false,
+          "name": "GameBarrier",
+          "persistentUuid": "cfd4eef1-b433-4d52-913a-f8a1f5b7766a",
+          "width": 11,
+          "x": -11,
+          "y": -12,
+          "zOrder": 15,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 90,
+          "customSize": true,
+          "height": 816,
+          "layer": "",
+          "locked": false,
+          "name": "GameBarrier",
+          "persistentUuid": "bf012776-31a0-4f07-9b1f-7eb08bd01fd1",
+          "width": 11,
+          "x": 392,
+          "y": 199,
+          "zOrder": 15,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 90,
+          "customSize": true,
+          "height": 816,
+          "layer": "",
+          "locked": false,
+          "name": "GameBarrier",
+          "persistentUuid": "27463496-cff8-464e-8694-304dabda3980",
+          "width": 11,
+          "x": 397,
+          "y": -414,
+          "zOrder": 15,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -935,13 +1188,7 @@
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
-          "behaviors": [
-            {
-              "name": "DestroyOutside",
-              "type": "DestroyOutsideBehavior::DestroyOutside",
-              "extraBorder": 0
-            }
-          ],
+          "behaviors": [],
           "animations": [
             {
               "name": "",
@@ -1011,13 +1258,7 @@
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
-          "behaviors": [
-            {
-              "name": "DestroyOutside",
-              "type": "DestroyOutsideBehavior::DestroyOutside",
-              "extraBorder": 0
-            }
-          ],
+          "behaviors": [],
           "animations": [
             {
               "name": "",
@@ -1072,6 +1313,186 @@
               ]
             }
           ]
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "PressSpaceToBeginText",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "Press Spacebar to begin!",
+          "font": "",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "GameOverText",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "Game Over!",
+          "font": "",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "RestartText",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "Press Enter to start again.",
+          "font": "",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "FinalScoreText",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "Final score: ",
+          "font": "",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
+        },
+        {
+          "bold": false,
+          "italic": true,
+          "name": "DevControls",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "Developer Controls:\n\"1\" Ends the game\n\"2\" Toggles invincibility",
+          "font": "",
+          "characterSize": 15,
+          "color": {
+            "b": 138,
+            "g": 138,
+            "r": 138
+          }
+        },
+        {
+          "bold": true,
+          "italic": false,
+          "name": "EnabledText",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "Enabled",
+          "font": "",
+          "characterSize": 10,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 255
+          }
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "SnowballSizeTest",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "0",
+          "font": "",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
+        },
+        {
+          "name": "GameBarrier",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [
+            {
+              "name": "Platform",
+              "type": "PlatformBehavior::PlatformBehavior",
+              "canBeGrabbed": false,
+              "platformType": "NormalPlatform",
+              "yGrabOffset": 0
+            }
+          ],
+          "animations": [
+            {
+              "name": "Barrier",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Barrier-1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "events": [
@@ -1081,7 +1502,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Variables",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -1098,7 +1519,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Variables:\n\nobstacleDirection: degree that the global force is applied to (270 degrees = up)\nobstacleSpeed: speed at which obstacles go up\nsizeDecrement: how much to subtact from the scale of the snowball when it collides",
+              "comment": "Variables:\n\nobstacleDirection: degree that the global force is applied to (270 degrees = up).\nobstacleSpeed: speed at which obstacles go up.\nsizeDecrease: how much to subtact from the scale of the snowball when it collides.\nsizeIncrease: how much to add to the scale of the snowball as the game goes on.\nspeedIncrease: how much to add to the speed of the snowball as the game goes on.\nspeedDecrease: how much to subtract to the speed of the snowball when it collides.\nscore: keeps track of the player's points\nsnowballSpeed: how fast the snowball goes\nsnowballSize: ends the game if size is smaller than original\nstate: 0 = Game hasn't started, 1 = Game in action, 2 = Game over\ninvincibility: toggles if snowball can collide with objects or not - for DevControls. 0 = Disabled 1 = Enabled\ninvinciblityStateChanged: keeps track of if DevControls are enabled",
               "comment2": ""
             },
             {
@@ -1148,9 +1569,425 @@
                     "value": "ModVarScene"
                   },
                   "parameters": [
-                    "sizeDecrement",
+                    "sizeDecrease",
                     "=",
-                    "0.002"
+                    "0.005"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "sizeIncrease",
+                    "=",
+                    "0.001"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "score",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "state",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "snowballSpeed",
+                    "=",
+                    "200"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "speedIncrease",
+                    "=",
+                    "25"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "speedDecrease",
+                    "=",
+                    "25"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "snowballSize",
+                    "=",
+                    "0\n"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "invincibility",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "invincibilityStateChanged",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "DepartScene"
+                  },
+                  "parameters": [
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "GameOverText"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "RestartText"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "FinalScoreText"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "EnabledText"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "disabled": false,
+          "folded": true,
+          "name": "Game States",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Pressing spacebar starts the game.",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "state",
+                    "=",
+                    "0\n"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "Space"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "state",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "PressSpaceToBeginText"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Game over shows the final score.",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "state",
+                    "=",
+                    "2"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "PressSpaceToBeginText"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "GameOverText",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "RestartText",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "FinalScoreText",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "ScoreText"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "ScoreNum",
+                    "=",
+                    "430",
+                    "=",
+                    "288"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "At game over, pressing Enter restarts the game.",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "state",
+                    "=",
+                    "2\n\n"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "Return"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"FirstLevel\"",
+                    ""
                   ],
                   "subInstructions": []
                 }
@@ -1167,7 +2004,7 @@
           "creationTime": 0,
           "disabled": false,
           "folded": false,
-          "name": "Scene Initialisation",
+          "name": "Gameplay",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
@@ -1183,14 +2020,27 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Initialising obstacle movement.",
+              "comment": "Initialising obstacle movement to start the game.",
               "comment2": ""
             },
             {
               "disabled": false,
               "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "state",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
               "actions": [
                 {
                   "type": {
@@ -1229,95 +2079,433 @@
                   "subInstructions": []
                 }
               ],
-              "events": []
-            }
-          ],
-          "parameters": []
-        },
-        {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "disabled": false,
-          "folded": false,
-          "name": "Collision Events",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "If the snowball collides with any obstaces, it decreases in size.",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
+              "events": [
                 {
-                  "type": {
-                    "inverted": false,
-                    "value": "BuiltinCommonInstructions::Or"
-                  },
-                  "parameters": [],
-                  "subInstructions": [
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "disabled": false,
+                  "folded": false,
+                  "name": "Collision Events",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
                     {
-                      "type": {
-                        "inverted": false,
-                        "value": "CollisionNP"
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
                       },
-                      "parameters": [
-                        "Snowball",
-                        "Rock",
-                        "",
-                        "",
-                        ""
-                      ],
-                      "subInstructions": []
+                      "comment": "If the snowball collides with any obstaces, it decreases in size and you lose points. Only collides as long as DevControls aren't enabled.",
+                      "comment2": ""
                     },
                     {
-                      "type": {
-                        "inverted": false,
-                        "value": "CollisionNP"
-                      },
-                      "parameters": [
-                        "Snowball",
-                        "WhiteTree",
-                        "",
-                        "",
-                        ""
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "invincibility",
+                            "=",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "BuiltinCommonInstructions::Or"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "CollisionNP"
+                              },
+                              "parameters": [
+                                "Snowball",
+                                "Rock",
+                                "",
+                                "",
+                                ""
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "CollisionNP"
+                              },
+                              "parameters": [
+                                "Snowball",
+                                "WhiteTree",
+                                "",
+                                "",
+                                ""
+                              ],
+                              "subInstructions": []
+                            }
+                          ]
+                        }
                       ],
-                      "subInstructions": []
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ChangeScale"
+                          },
+                          "parameters": [
+                            "Snowball",
+                            "-",
+                            "Variable(sizeDecrease)"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "score",
+                            "-",
+                            "2"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "snowballSize",
+                            "-",
+                            "2"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "SeparateFromObjects"
+                          },
+                          "parameters": [
+                            "Snowball",
+                            "GameBarrier",
+                            ""
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
                     }
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ChangeScale"
-                  },
-                  "parameters": [
-                    "Snowball",
-                    "-",
-                    "Variable(sizeDecrement)"
                   ],
-                  "subInstructions": []
+                  "parameters": []
+                },
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "disabled": false,
+                  "folded": true,
+                  "name": "Endless Scolling",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "All obstacles move up in the game frame endlessly",
+                      "comment2": ""
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "PosY"
+                          },
+                          "parameters": [
+                            "Rock",
+                            "<=",
+                            "-100"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "MettreY"
+                          },
+                          "parameters": [
+                            "Rock",
+                            "=",
+                            "RandomInRange(700,1500)"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "MettreX"
+                          },
+                          "parameters": [
+                            "Rock",
+                            "=",
+                            "RandomInRange(10,640)"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "PosY"
+                          },
+                          "parameters": [
+                            "WhiteTree",
+                            "<=",
+                            "-100"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "MettreY"
+                          },
+                          "parameters": [
+                            "WhiteTree",
+                            "=",
+                            "RandomInRange(600,1600)"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "MettreX"
+                          },
+                          "parameters": [
+                            "WhiteTree",
+                            "=",
+                            "RandomInRange(10,640)"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    }
+                  ],
+                  "parameters": []
+                },
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "disabled": false,
+                  "folded": false,
+                  "name": "Snowball Mechanics",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Snowball gradually gets bigger and slower when it's moving. Adds towards the score.",
+                      "comment2": ""
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "TopDownMovementBehavior::IsMoving"
+                          },
+                          "parameters": [
+                            "Snowball",
+                            "TopDownMovement"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "TextObject::String"
+                          },
+                          "parameters": [
+                            "ScoreNum",
+                            "=",
+                            "ToString(Variable(score))"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ChangeScale"
+                          },
+                          "parameters": [
+                            "Snowball",
+                            "+",
+                            "Variable(sizeIncrease)"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "TextObject::String"
+                          },
+                          "parameters": [
+                            "SnowballSizeTest",
+                            "=",
+                            "ToString(Variable(snowballSize))"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "snowballSize",
+                            "+",
+                            "0.5"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "score",
+                            "+",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "If Snowball size is less than 10, it changes the state to 2 and ends the game.",
+                      "comment2": ""
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "snowballSize",
+                            "<",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "state",
+                            "=",
+                            "2"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    }
+                  ],
+                  "parameters": []
                 }
-              ],
-              "events": []
+              ]
             }
           ],
           "parameters": []
@@ -1329,7 +2517,7 @@
           "creationTime": 0,
           "disabled": false,
           "folded": true,
-          "name": "Endless Scolling",
+          "name": "Developer Controls",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
@@ -1345,7 +2533,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "All obstacles move up in the game frame endlessly",
+              "comment": "\"1\" ends the game. \"2\" toggles invincibility.",
               "comment2": ""
             },
             {
@@ -1356,12 +2544,11 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "PosY"
+                    "value": "KeyPressed"
                   },
                   "parameters": [
-                    "Rock",
-                    "<=",
-                    "-200"
+                    "",
+                    "Num1"
                   ],
                   "subInstructions": []
                 }
@@ -1370,74 +2557,196 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "MettreY"
+                    "value": "ModVarScene"
                   },
                   "parameters": [
-                    "Rock",
+                    "state",
                     "=",
-                    "900"
+                    "2"
                   ],
                   "subInstructions": []
                 }
               ],
               "events": []
-            }
-          ],
-          "parameters": []
-        },
-        {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "disabled": false,
-          "folded": false,
-          "name": "Snowball Mechanics",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
+            },
             {
               "disabled": false,
-              "folded": false,
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
                     "inverted": false,
-                    "value": "BuiltinCommonInstructions::Or"
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "Num2"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::Once"
                   },
                   "parameters": [],
-                  "subInstructions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "TopDownMovementBehavior::Acceleration"
-                      },
-                      "parameters": [
-                        "Snowball",
-                        "TopDownMovement",
-                        "=",
-                        "0"
-                      ],
-                      "subInstructions": []
-                    }
-                  ]
+                  "subInstructions": []
                 }
               ],
               "actions": [
                 {
                   "type": {
                     "inverted": false,
-                    "value": "SetAnimationName"
+                    "value": "ModVarScene"
                   },
                   "parameters": [
-                    "Snowball",
-                    "\"snowball_static\""
+                    "invincibilityStateChanged",
+                    "=",
+                    "0"
                   ],
                   "subInstructions": []
                 }
               ],
-              "events": []
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "invincibilityStateChanged",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "invincibility",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "invincibility",
+                        "=",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "invincibilityStateChanged",
+                        "=",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Montre"
+                      },
+                      "parameters": [
+                        "EnabledText",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "invincibilityStateChanged",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "invincibility",
+                        "=",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "invincibility",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "invincibilityStateChanged",
+                        "=",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Cache"
+                      },
+                      "parameters": [
+                        "EnabledText"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
             }
           ],
           "parameters": []
@@ -1509,6 +2818,10 @@
         }
       ],
       "behaviorsSharedData": [
+        {
+          "name": "Platform",
+          "type": "PlatformBehavior::PlatformBehavior"
+        },
         {
           "name": "TopDownMovement",
           "type": "TopDownMovementBehavior::TopDownMovementBehavior"
