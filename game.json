@@ -275,6 +275,24 @@
         "name": "Barrier-1.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "CheckPattern-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "CheckPattern-1.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "../Assets/snowyRocksAndBushes/rock_snowy_1c_al1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "../Assets/snowyRocksAndBushes/rock_snowy_1c_al1.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -288,6 +306,7 @@
       "variables": [],
       "behaviors": [
         {
+          "ignoreDefaultControls": false,
           "name": "TopDownMovement",
           "type": "TopDownMovementBehavior::TopDownMovementBehavior",
           "acceleration": 400,
@@ -296,7 +315,6 @@
           "angularMaxSpeed": 180,
           "customIsometryAngle": 30,
           "deceleration": 800,
-          "ignoreDefaultControls": false,
           "maxSpeed": 200,
           "rotateObject": false,
           "viewpoint": "TopDown"
@@ -304,7 +322,7 @@
       ],
       "animations": [
         {
-          "name": "snowball_01",
+          "name": "snowballMoving",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -652,7 +670,7 @@
           ]
         },
         {
-          "name": "snowball_static",
+          "name": "snowballStatic",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -751,10 +769,6 @@
           "value": ""
         },
         {
-          "name": "snowballSize",
-          "value": ""
-        },
-        {
           "name": "invincibility",
           "value": ""
         },
@@ -783,12 +797,12 @@
         {
           "angle": -75,
           "customSize": true,
-          "height": 37,
+          "height": 12,
           "layer": "",
           "locked": false,
           "name": "Snowball",
           "persistentUuid": "2d00f7da-09a6-4330-ae1b-51477ccccc3c",
-          "width": 49,
+          "width": 16,
           "x": 375,
           "y": 22,
           "zOrder": 1,
@@ -1054,22 +1068,6 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "SnowballSizeTest",
-          "persistentUuid": "cb7d1fdb-63bf-4ec1-b1df-0f477b31ae55",
-          "width": 0,
-          "x": 644,
-          "y": 419,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
           "customSize": true,
           "height": 613,
           "layer": "",
@@ -1094,7 +1092,7 @@
           "persistentUuid": "cfd4eef1-b433-4d52-913a-f8a1f5b7766a",
           "width": 11,
           "x": -11,
-          "y": -12,
+          "y": -11,
           "zOrder": 15,
           "numberProperties": [],
           "stringProperties": [],
@@ -1110,7 +1108,7 @@
           "persistentUuid": "bf012776-31a0-4f07-9b1f-7eb08bd01fd1",
           "width": 11,
           "x": 392,
-          "y": 199,
+          "y": 198,
           "zOrder": 15,
           "numberProperties": [],
           "stringProperties": [],
@@ -1143,6 +1141,53 @@
           "width": 32,
           "variables": [],
           "behaviors": []
+        },
+        {
+          "name": "GameBarrier",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [
+            {
+              "name": "Platform",
+              "type": "PlatformBehavior::PlatformBehavior",
+              "canBeGrabbed": false,
+              "platformType": "NormalPlatform",
+              "yGrabOffset": 0
+            }
+          ],
+          "animations": [
+            {
+              "name": "Barrier",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Barrier-1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         },
         {
           "bold": false,
@@ -1181,138 +1226,6 @@
             "g": 0,
             "r": 0
           }
-        },
-        {
-          "name": "Rock",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Big Brown Meteor (3).png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 34.1249,
-                            "y": 0.864304
-                          },
-                          {
-                            "x": 74.4651,
-                            "y": 12.2355
-                          },
-                          {
-                            "x": 87.8193,
-                            "y": 41.7313
-                          },
-                          {
-                            "x": 65.6886,
-                            "y": 81.6495
-                          },
-                          {
-                            "x": 16.8039,
-                            "y": 74.6324
-                          },
-                          {
-                            "x": 1.23297,
-                            "y": 52.4539
-                          },
-                          {
-                            "x": 0.262756,
-                            "y": 23.1976
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "WhiteTree",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "White tree (2).png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 100.263,
-                            "y": 1.13598
-                          },
-                          {
-                            "x": 201.177,
-                            "y": 352.201
-                          },
-                          {
-                            "x": 146.735,
-                            "y": 379.142
-                          },
-                          {
-                            "x": 47.1359,
-                            "y": 372.671
-                          },
-                          {
-                            "x": -2.08649,
-                            "y": 354.523
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
         },
         {
           "bold": false,
@@ -1429,51 +1342,34 @@
           }
         },
         {
-          "bold": false,
-          "italic": false,
-          "name": "SnowballSizeTest",
-          "smoothed": true,
+          "height": 32,
+          "name": "FinishLine",
           "tags": "",
-          "type": "TextObject::Text",
-          "underlined": false,
+          "texture": "CheckPattern-1.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 32,
           "variables": [],
-          "behaviors": [],
-          "string": "0",
-          "font": "",
-          "characterSize": 20,
-          "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
-          }
+          "behaviors": []
         },
         {
-          "name": "GameBarrier",
+          "name": "WhiteTree",
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
-          "behaviors": [
-            {
-              "name": "Platform",
-              "type": "PlatformBehavior::PlatformBehavior",
-              "canBeGrabbed": false,
-              "platformType": "NormalPlatform",
-              "yGrabOffset": 0
-            }
-          ],
+          "behaviors": [],
           "animations": [
             {
-              "name": "Barrier",
+              "name": "",
               "useMultipleDirections": false,
               "directions": [
                 {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
+                  "looping": true,
+                  "timeBetweenFrames": 0.025,
                   "sprites": [
                     {
-                      "hasCustomCollisionMask": false,
-                      "image": "Barrier-1.png",
+                      "hasCustomCollisionMask": true,
+                      "image": "White tree (2).png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -1486,7 +1382,100 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 102.945,
+                            "y": 171.722
+                          },
+                          {
+                            "x": 201.177,
+                            "y": 352.201
+                          },
+                          {
+                            "x": 146.735,
+                            "y": 379.142
+                          },
+                          {
+                            "x": 47.1359,
+                            "y": 372.671
+                          },
+                          {
+                            "x": -2.08649,
+                            "y": 354.523
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Rock",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.025,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Big Brown Meteor (3).png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 34.1249,
+                            "y": 0.864304
+                          },
+                          {
+                            "x": 74.4651,
+                            "y": 12.2355
+                          },
+                          {
+                            "x": 87.8193,
+                            "y": 41.7313
+                          },
+                          {
+                            "x": 65.6886,
+                            "y": 81.6495
+                          },
+                          {
+                            "x": 16.8039,
+                            "y": 74.6324
+                          },
+                          {
+                            "x": 1.23297,
+                            "y": 52.4539
+                          },
+                          {
+                            "x": 0.262756,
+                            "y": 23.1976
+                          }
+                        ]
+                      ]
                     }
                   ]
                 }
@@ -1502,7 +1491,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Variables",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -1519,7 +1508,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Variables:\n\nobstacleDirection: degree that the global force is applied to (270 degrees = up).\nobstacleSpeed: speed at which obstacles go up.\nsizeDecrease: how much to subtact from the scale of the snowball when it collides.\nsizeIncrease: how much to add to the scale of the snowball as the game goes on.\nspeedIncrease: how much to add to the speed of the snowball as the game goes on.\nspeedDecrease: how much to subtract to the speed of the snowball when it collides.\nscore: keeps track of the player's points\nsnowballSpeed: how fast the snowball goes\nsnowballSize: ends the game if size is smaller than original\nstate: 0 = Game hasn't started, 1 = Game in action, 2 = Game over\ninvincibility: toggles if snowball can collide with objects or not - for DevControls. 0 = Disabled 1 = Enabled\ninvinciblityStateChanged: keeps track of if DevControls are enabled",
+              "comment": "Variables:\n\nobstacleDirection: degree that the global force is applied to (270 degrees = up).\nobstacleSpeed: speed at which obstacles go up.\nsizeDecrease: how much to subtact from the scale of the snowball when it collides.\nsizeIncrease: how much to add to the scale of the snowball as the game goes on.\nspeedIncrease: how much to add to the speed of the snowball as the game goes on.\nspeedDecrease: how much to subtract to the speed of the snowball when it collides.\nscore: keeps track of the player's points\nsnowballSpeed: how fast the snowball goes\nstate: 0 = Game hasn't started, 1 = Game in action, 2 = Game over\ninvincibility: toggles if snowball can collide with objects or not - for DevControls. 0 = Disabled 1 = Enabled\ninvinciblityStateChanged: keeps track of if DevControls are enabled",
               "comment2": ""
             },
             {
@@ -1571,7 +1560,7 @@
                   "parameters": [
                     "sizeDecrease",
                     "=",
-                    "0.005"
+                    "0.01"
                   ],
                   "subInstructions": []
                 },
@@ -1583,7 +1572,7 @@
                   "parameters": [
                     "sizeIncrease",
                     "=",
-                    "0.001"
+                    "0.0005"
                   ],
                   "subInstructions": []
                 },
@@ -1644,18 +1633,6 @@
                     "speedDecrease",
                     "=",
                     "25"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarScene"
-                  },
-                  "parameters": [
-                    "snowballSize",
-                    "=",
-                    "0\n"
                   ],
                   "subInstructions": []
                 },
@@ -1857,7 +1834,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Game over shows the final score.",
+              "comment": "Game over shows the final score.\nDisables snowball movement.",
               "comment2": ""
             },
             {
@@ -1945,6 +1922,29 @@
                     "288"
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Snowball",
+                    "TopDownMovement",
+                    "no"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SetAnimationName"
+                  },
+                  "parameters": [
+                    "Snowball",
+                    "\"snowballStatic\""
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": []
@@ -2018,7 +2018,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Gameplay",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -2040,7 +2040,7 @@
             },
             {
               "disabled": false,
-              "folded": true,
+              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -2101,7 +2101,7 @@
                   "colorR": 74,
                   "creationTime": 0,
                   "disabled": false,
-                  "folded": false,
+                  "folded": true,
                   "name": "Collision Events",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -2200,18 +2200,6 @@
                             "2"
                           ],
                           "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ModVarScene"
-                          },
-                          "parameters": [
-                            "snowballSize",
-                            "-",
-                            "2"
-                          ],
-                          "subInstructions": []
                         }
                       ],
                       "events": []
@@ -2278,7 +2266,7 @@
                         "textG": 0,
                         "textR": 0
                       },
-                      "comment": "All obstacles move up in the game frame endlessly",
+                      "comment": "All obstacles move up in the game frame endlessly, in random positions.",
                       "comment2": ""
                     },
                     {
@@ -2382,7 +2370,7 @@
                   "colorR": 74,
                   "creationTime": 0,
                   "disabled": false,
-                  "folded": true,
+                  "folded": false,
                   "name": "Snowball Mechanics",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -2399,26 +2387,14 @@
                         "textG": 0,
                         "textR": 0
                       },
-                      "comment": "Snowball gradually gets bigger and slower when it's moving. Adds towards the score.",
+                      "comment": "Snowball gradually gets bigger and adds towards the score. \nObstacles also slowly gets faster.",
                       "comment2": ""
                     },
                     {
                       "disabled": false,
                       "folded": false,
                       "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "TopDownMovementBehavior::IsMoving"
-                          },
-                          "parameters": [
-                            "Snowball",
-                            "TopDownMovement"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
+                      "conditions": [],
                       "actions": [
                         {
                           "type": {
@@ -2447,18 +2423,6 @@
                         {
                           "type": {
                             "inverted": false,
-                            "value": "TextObject::String"
-                          },
-                          "parameters": [
-                            "SnowballSizeTest",
-                            "=",
-                            "ToString(Variable(snowballSize))"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
                             "value": "ModVarScene"
                           },
                           "parameters": [
@@ -2479,6 +2443,18 @@
                             "1"
                           ],
                           "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "obstacleSpeed",
+                            "+",
+                            "0.1"
+                          ],
+                          "subInstructions": []
                         }
                       ],
                       "events": []
@@ -2495,7 +2471,7 @@
                         "textG": 0,
                         "textR": 0
                       },
-                      "comment": "If Snowball size is less than 10, it changes the state to 2 and ends the game.",
+                      "comment": "If Snowball size is less than 10x13, it changes the state to 2 and ends the game.",
                       "comment2": ""
                     },
                     {
@@ -2506,14 +2482,35 @@
                         {
                           "type": {
                             "inverted": false,
-                            "value": "VarScene"
+                            "value": "BuiltinCommonInstructions::And"
                           },
-                          "parameters": [
-                            "snowballSize",
-                            "<",
-                            "0"
-                          ],
-                          "subInstructions": []
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ScaleWidth"
+                              },
+                              "parameters": [
+                                "Snowball",
+                                "<=",
+                                "0.02"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ScaleHeight"
+                              },
+                              "parameters": [
+                                "Snowball",
+                                "<=",
+                                "0.01"
+                              ],
+                              "subInstructions": []
+                            }
+                          ]
                         }
                       ],
                       "actions": [
@@ -2780,20 +2777,17 @@
             }
           ],
           "parameters": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
         }
       ],
       "layers": [
-        {
-          "ambientLightColorB": 1702453632,
-          "ambientLightColorG": 6009760,
-          "ambientLightColorR": 134217728,
-          "followBaseLayerCamera": false,
-          "isLightingLayer": false,
-          "name": "Background",
-          "visibility": true,
-          "cameras": [],
-          "effects": []
-        },
         {
           "ambientLightColorB": 0,
           "ambientLightColorG": 0,
