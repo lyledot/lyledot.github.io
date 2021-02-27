@@ -1,6 +1,6 @@
-A snowball game where you must be as large as possible but avoid obstacles!
-
 Landing page for CSC3224 - Computer Games Development.
+
+A snowball game where you must be as large as possible but avoid obstacles!
 
 Asset credits:
 
