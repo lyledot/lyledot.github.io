@@ -600,6 +600,56 @@
         "name": "snow_bush_01a_al1.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Tree (2).png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Tree (2).png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/pzUH Pack/Worlds/Winter/Objects/Tree (2).png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "file": "Bouncy-PERSONAL_USE_ONLY.otf",
+        "kind": "font",
+        "metadata": "",
+        "name": "Bouncy-PERSONAL_USE_ONLY.otf",
+        "userAdded": true
+      },
+      {
+        "file": "Bouncy-Black-PERSONAL_USE_ONLY.otf",
+        "kind": "font",
+        "metadata": "",
+        "name": "Bouncy-Black-PERSONAL_USE_ONLY.otf",
+        "userAdded": false
+      },
+      {
+        "file": "Bouncy-Thin-PERSONAL_USE_ONLY.otf",
+        "kind": "font",
+        "metadata": "",
+        "name": "Bouncy-Thin-PERSONAL_USE_ONLY.otf",
+        "userAdded": true
+      },
+      {
+        "file": "Heavitas.ttf",
+        "kind": "font",
+        "metadata": "",
+        "name": "Heavitas.ttf",
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Tree (2).png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/Tree (2).png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -617,13 +667,802 @@
     }
   ],
   "objectsGroups": [],
-  "variables": [],
+  "variables": [
+    {
+      "name": "score",
+      "value": ""
+    }
+  ],
   "layouts": [
+    {
+      "b": 209,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "Opening",
+      "name": "Opening",
+      "oglFOV": 90,
+      "oglZFar": 500,
+      "oglZNear": 1,
+      "r": 209,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 209,
+      "uiSettings": {
+        "grid": false,
+        "gridB": 255,
+        "gridG": 180,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridR": 158,
+        "gridWidth": 32,
+        "snap": true,
+        "windowMask": false,
+        "zoomFactor": 0.8
+      },
+      "objectsGroups": [],
+      "variables": [
+        {
+          "name": "exitSelected",
+          "value": ""
+        }
+      ],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 600,
+          "layer": "",
+          "locked": false,
+          "name": "SnowBackground",
+          "persistentUuid": "43902eac-0957-4e8e-ad4f-2252dd2371c7",
+          "width": 800,
+          "x": 0,
+          "y": 0,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "GameTitle",
+          "persistentUuid": "7f7beb53-5da6-45c8-8db5-18a6e6a199a4",
+          "width": 0,
+          "x": 195,
+          "y": 79,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "Options",
+          "persistentUuid": "1755e8bb-43ee-483d-b558-1cbc42fa2234",
+          "width": 0,
+          "x": 395,
+          "y": 320,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "SignArrowPlay",
+          "persistentUuid": "44367221-aa15-44d0-aa94-9c6b7102860f",
+          "width": 0,
+          "x": 340,
+          "y": 315,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "SignArrowExit",
+          "persistentUuid": "f41a8cd5-c80d-49a6-b9ca-15658ba0cc82",
+          "width": 0,
+          "x": 340,
+          "y": 350,
+          "zOrder": 6,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 368,
+          "layer": "",
+          "locked": false,
+          "name": "SnowyTree",
+          "persistentUuid": "5b8dd424-71a0-4476-a347-3b66012dec73",
+          "width": 300,
+          "x": 600,
+          "y": 232,
+          "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 368,
+          "layer": "",
+          "locked": false,
+          "name": "SnowyTree",
+          "persistentUuid": "2a89e330-2fc7-41b2-80d1-76587fe70503",
+          "width": 300,
+          "x": -124,
+          "y": 232,
+          "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "SceneInstructions",
+          "persistentUuid": "adb60ec6-c391-4133-832d-0e58e3557710",
+          "width": 0,
+          "x": 290,
+          "y": 530,
+          "zOrder": 8,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "bold": true,
+          "italic": false,
+          "name": "GameTitle",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "Snowball\n Cruising",
+          "font": "Heavitas.ttf",
+          "characterSize": 70,
+          "color": {
+            "b": 174,
+            "g": 216,
+            "r": 130
+          }
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "Options",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "Play\nExit",
+          "font": "",
+          "characterSize": 30,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
+        },
+        {
+          "name": "SignArrowExit",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "SignArrow",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.025,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets/SignArrow2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "SignArrowPlay",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "SignArrow",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.025,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets/SignArrow2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "SceneInstructions",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "Arrow keys to make your selection\n                Enter to choose",
+          "font": "",
+          "characterSize": 15,
+          "color": {
+            "b": 196,
+            "g": 196,
+            "r": 196
+          }
+        },
+        {
+          "name": "SnowyTree",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Tree2",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.025,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets/Tree (2).png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "events": [
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "disabled": false,
+          "folded": false,
+          "name": "Variables",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "exitSelected: keeps track if player is hovering over play (0) or exit (1)",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "DepartScene"
+                  },
+                  "parameters": [
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "SignArrowExit"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "exitSelected",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "disabled": false,
+          "folded": false,
+          "name": "Game States",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Toggles the sign arrow in accordance to the keyboard input",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "Down"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": [],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "SignArrowPlay"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "SignArrowExit",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "exitSelected",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "Up"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": [],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "SignArrowPlay",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "SignArrowExit"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "exitSelected",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Starts the game and changes scene to FirstLevel",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::And"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "exitSelected",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "KeyPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "Return"
+                      ],
+                      "subInstructions": []
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Play\"",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Quits the game",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::And"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "exitSelected",
+                        "=",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "KeyPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "Return"
+                      ],
+                      "subInstructions": []
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Quit"
+                  },
+                  "parameters": [
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ],
+          "parameters": []
+        }
+      ],
+      "layers": [
+        {
+          "ambientLightColorB": 7893136,
+          "ambientLightColorG": 7893648,
+          "ambientLightColorR": 7881008,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": []
+        }
+      ],
+      "behaviorsSharedData": []
+    },
+    {
+      "b": 209,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "Instructions",
+      "name": "Instructions",
+      "oglFOV": 90,
+      "oglZFar": 500,
+      "oglZNear": 1,
+      "r": 209,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 209,
+      "uiSettings": {
+        "grid": false,
+        "gridB": 255,
+        "gridG": 180,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridR": 158,
+        "gridWidth": 32,
+        "snap": true,
+        "windowMask": false,
+        "zoomFactor": 1
+      },
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [],
+      "objects": [],
+      "events": [],
+      "layers": [
+        {
+          "ambientLightColorB": 7797440,
+          "ambientLightColorG": 7847448,
+          "ambientLightColorR": 7296392,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": []
+        }
+      ],
+      "behaviorsSharedData": []
+    },
     {
       "b": 155,
       "disableInputWhenNotFocused": true,
-      "mangledName": "FirstLevel",
-      "name": "FirstLevel",
+      "mangledName": "Play",
+      "name": "Play",
       "oglFOV": 90,
       "oglZFar": 500,
       "oglZNear": 1,
@@ -665,10 +1504,6 @@
         },
         {
           "name": "score",
-          "value": ""
-        },
-        {
-          "name": "state",
           "value": ""
         },
         {
@@ -719,7 +1554,7 @@
           "persistentUuid": "c388fba9-703d-4fa6-b467-96c757cca345",
           "width": 0,
           "x": 14,
-          "y": 16,
+          "y": 15,
           "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
@@ -735,7 +1570,7 @@
           "persistentUuid": "4f1d3735-2c3f-4e78-8185-635f82aea0e4",
           "width": 0,
           "x": 87,
-          "y": 17,
+          "y": 16,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -878,41 +1713,9 @@
           "name": "PressEnterToBeginText",
           "persistentUuid": "4764d867-d058-4115-bf65-7858fb8b0f4f",
           "width": 0,
-          "x": 293,
-          "y": 172,
+          "x": 260,
+          "y": 170,
           "zOrder": 8,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "GameOverText",
-          "persistentUuid": "7c3f5831-dfdd-47f1-9cb3-af38aec865e7",
-          "width": 0,
-          "x": 343,
-          "y": 250,
-          "zOrder": 9,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "FinalScoreText",
-          "persistentUuid": "311c6cdf-a353-4131-8bb5-c6911a0b4f5f",
-          "width": 0,
-          "x": 297,
-          "y": 289,
-          "zOrder": 11,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1126,51 +1929,13 @@
           "underlined": false,
           "variables": [],
           "behaviors": [],
-          "string": "Press Enter to begin!",
+          "string": "Press the Spacebar to begin!",
           "font": "",
           "characterSize": 20,
           "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
-          }
-        },
-        {
-          "bold": false,
-          "italic": false,
-          "name": "GameOverText",
-          "smoothed": true,
-          "tags": "",
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "behaviors": [],
-          "string": "Game Over!",
-          "font": "",
-          "characterSize": 20,
-          "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
-          }
-        },
-        {
-          "bold": false,
-          "italic": false,
-          "name": "FinalScoreText",
-          "smoothed": true,
-          "tags": "",
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "behaviors": [],
-          "string": "Final score: ",
-          "font": "",
-          "characterSize": 20,
-          "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
+            "b": 196,
+            "g": 196,
+            "r": 196
           }
         },
         {
@@ -1295,32 +2060,32 @@
                             "y": 92.2253
                           },
                           {
-                            "x": 19.0737,
-                            "y": 64.4701
+                            "x": 21.2758,
+                            "y": 67.8924
                           },
                           {
-                            "x": 40.1168,
-                            "y": 45.2614
+                            "x": 36.3647,
+                            "y": 67.6171
                           },
                           {
-                            "x": 44.8552,
-                            "y": 14.7984
+                            "x": 53.6056,
+                            "y": 70.5833
                           },
                           {
-                            "x": 71.8015,
-                            "y": -0.946976
+                            "x": 70.0446,
+                            "y": 73.8478
                           },
                           {
-                            "x": 106.306,
-                            "y": 6.48416
+                            "x": 100.762,
+                            "y": 73.3358
                           },
                           {
-                            "x": 138.498,
-                            "y": 28.2577
+                            "x": 125.019,
+                            "y": 68.5194
                           },
                           {
-                            "x": 140.786,
-                            "y": 62.9668
+                            "x": 141.301,
+                            "y": 66.2494
                           },
                           {
                             "x": 172.171,
@@ -1381,36 +2146,36 @@
                             "y": 87.933
                           },
                           {
-                            "x": 73.7371,
-                            "y": 84.6431
+                            "x": 74.689,
+                            "y": 82.5996
                           },
                           {
-                            "x": 20.744,
-                            "y": 77.4368
+                            "x": 65.5768,
+                            "y": 86.4111
                           },
                           {
-                            "x": 11.1595,
-                            "y": 55.1243
+                            "x": 14.2174,
+                            "y": 77.0101
                           },
                           {
-                            "x": 14.4293,
-                            "y": 22.7245
+                            "x": 0.795964,
+                            "y": 63.2056
                           },
                           {
-                            "x": 40.5328,
-                            "y": 22.0996
+                            "x": 9.90019,
+                            "y": 36.9091
                           },
                           {
-                            "x": 59.0128,
-                            "y": 3.26118
+                            "x": 40.8471,
+                            "y": 40.331
                           },
                           {
-                            "x": 94.7465,
-                            "y": 10.0558
+                            "x": 76.4517,
+                            "y": 45.9021
                           },
                           {
-                            "x": 124.241,
-                            "y": 25.3192
+                            "x": 123.255,
+                            "y": 47.0798
                           }
                         ]
                       ]
@@ -1453,7 +2218,7 @@
                   "timeBetweenFrames": 0.1,
                   "sprites": [
                     {
-                      "hasCustomCollisionMask": false,
+                      "hasCustomCollisionMask": true,
                       "image": "snowball_013.png",
                       "points": [],
                       "originPoint": {
@@ -1467,10 +2232,81 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 233.809,
+                            "y": 266.837
+                          },
+                          {
+                            "x": 203.87,
+                            "y": 297.475
+                          },
+                          {
+                            "x": 175.826,
+                            "y": 307.709
+                          },
+                          {
+                            "x": 144.965,
+                            "y": 320.704
+                          },
+                          {
+                            "x": 96.6122,
+                            "y": 316.24
+                          },
+                          {
+                            "x": 51.7,
+                            "y": 290.792
+                          },
+                          {
+                            "x": 22.4528,
+                            "y": 251.373
+                          },
+                          {
+                            "x": 17.5679,
+                            "y": 188.437
+                          },
+                          {
+                            "x": 35.2289,
+                            "y": 156.583
+                          },
+                          {
+                            "x": 50.4656,
+                            "y": 124.45
+                          },
+                          {
+                            "x": 76.5638,
+                            "y": 102.009
+                          },
+                          {
+                            "x": 107.812,
+                            "y": 93.7916
+                          },
+                          {
+                            "x": 148.397,
+                            "y": 87.2443
+                          },
+                          {
+                            "x": 191.562,
+                            "y": 98.5319
+                          },
+                          {
+                            "x": 223.831,
+                            "y": 129.834
+                          },
+                          {
+                            "x": 234.996,
+                            "y": 167.298
+                          },
+                          {
+                            "x": 247.071,
+                            "y": 202.076
+                          }
+                        ]
+                      ]
                     },
                     {
-                      "hasCustomCollisionMask": false,
+                      "hasCustomCollisionMask": true,
                       "image": "snowball_022.png",
                       "points": [],
                       "originPoint": {
@@ -1484,10 +2320,81 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 233.809,
+                            "y": 266.837
+                          },
+                          {
+                            "x": 203.87,
+                            "y": 297.475
+                          },
+                          {
+                            "x": 175.826,
+                            "y": 307.709
+                          },
+                          {
+                            "x": 144.965,
+                            "y": 320.704
+                          },
+                          {
+                            "x": 96.6122,
+                            "y": 316.24
+                          },
+                          {
+                            "x": 51.7,
+                            "y": 290.792
+                          },
+                          {
+                            "x": 22.4528,
+                            "y": 251.373
+                          },
+                          {
+                            "x": 17.5679,
+                            "y": 188.437
+                          },
+                          {
+                            "x": 35.2289,
+                            "y": 156.583
+                          },
+                          {
+                            "x": 50.4656,
+                            "y": 124.45
+                          },
+                          {
+                            "x": 76.5638,
+                            "y": 102.009
+                          },
+                          {
+                            "x": 107.812,
+                            "y": 93.7916
+                          },
+                          {
+                            "x": 148.397,
+                            "y": 87.2443
+                          },
+                          {
+                            "x": 191.562,
+                            "y": 98.5319
+                          },
+                          {
+                            "x": 223.831,
+                            "y": 129.834
+                          },
+                          {
+                            "x": 234.996,
+                            "y": 167.298
+                          },
+                          {
+                            "x": 247.071,
+                            "y": 202.076
+                          }
+                        ]
+                      ]
                     },
                     {
-                      "hasCustomCollisionMask": false,
+                      "hasCustomCollisionMask": true,
                       "image": "snowball_032.png",
                       "points": [],
                       "originPoint": {
@@ -1501,10 +2408,81 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 233.809,
+                            "y": 266.837
+                          },
+                          {
+                            "x": 203.87,
+                            "y": 297.475
+                          },
+                          {
+                            "x": 175.826,
+                            "y": 307.709
+                          },
+                          {
+                            "x": 144.965,
+                            "y": 320.704
+                          },
+                          {
+                            "x": 96.6122,
+                            "y": 316.24
+                          },
+                          {
+                            "x": 51.7,
+                            "y": 290.792
+                          },
+                          {
+                            "x": 22.4528,
+                            "y": 251.373
+                          },
+                          {
+                            "x": 17.5679,
+                            "y": 188.437
+                          },
+                          {
+                            "x": 35.2289,
+                            "y": 156.583
+                          },
+                          {
+                            "x": 50.4656,
+                            "y": 124.45
+                          },
+                          {
+                            "x": 76.5638,
+                            "y": 102.009
+                          },
+                          {
+                            "x": 107.812,
+                            "y": 93.7916
+                          },
+                          {
+                            "x": 148.397,
+                            "y": 87.2443
+                          },
+                          {
+                            "x": 191.562,
+                            "y": 98.5319
+                          },
+                          {
+                            "x": 223.831,
+                            "y": 129.834
+                          },
+                          {
+                            "x": 234.996,
+                            "y": 167.298
+                          },
+                          {
+                            "x": 247.071,
+                            "y": 202.076
+                          }
+                        ]
+                      ]
                     },
                     {
-                      "hasCustomCollisionMask": false,
+                      "hasCustomCollisionMask": true,
                       "image": "snowball_042.png",
                       "points": [],
                       "originPoint": {
@@ -1518,10 +2496,81 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 233.809,
+                            "y": 266.837
+                          },
+                          {
+                            "x": 203.87,
+                            "y": 297.475
+                          },
+                          {
+                            "x": 175.826,
+                            "y": 307.709
+                          },
+                          {
+                            "x": 144.965,
+                            "y": 320.704
+                          },
+                          {
+                            "x": 96.6122,
+                            "y": 316.24
+                          },
+                          {
+                            "x": 51.7,
+                            "y": 290.792
+                          },
+                          {
+                            "x": 22.4528,
+                            "y": 251.373
+                          },
+                          {
+                            "x": 17.5679,
+                            "y": 188.437
+                          },
+                          {
+                            "x": 35.2289,
+                            "y": 156.583
+                          },
+                          {
+                            "x": 50.4656,
+                            "y": 124.45
+                          },
+                          {
+                            "x": 76.5638,
+                            "y": 102.009
+                          },
+                          {
+                            "x": 107.812,
+                            "y": 93.7916
+                          },
+                          {
+                            "x": 148.397,
+                            "y": 87.2443
+                          },
+                          {
+                            "x": 191.562,
+                            "y": 98.5319
+                          },
+                          {
+                            "x": 223.831,
+                            "y": 129.834
+                          },
+                          {
+                            "x": 234.996,
+                            "y": 167.298
+                          },
+                          {
+                            "x": 247.071,
+                            "y": 202.076
+                          }
+                        ]
+                      ]
                     },
                     {
-                      "hasCustomCollisionMask": false,
+                      "hasCustomCollisionMask": true,
                       "image": "snowball_052.png",
                       "points": [],
                       "originPoint": {
@@ -1535,10 +2584,81 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 233.809,
+                            "y": 266.837
+                          },
+                          {
+                            "x": 203.87,
+                            "y": 297.475
+                          },
+                          {
+                            "x": 175.826,
+                            "y": 307.709
+                          },
+                          {
+                            "x": 144.965,
+                            "y": 320.704
+                          },
+                          {
+                            "x": 96.6122,
+                            "y": 316.24
+                          },
+                          {
+                            "x": 51.7,
+                            "y": 290.792
+                          },
+                          {
+                            "x": 22.4528,
+                            "y": 251.373
+                          },
+                          {
+                            "x": 17.5679,
+                            "y": 188.437
+                          },
+                          {
+                            "x": 35.2289,
+                            "y": 156.583
+                          },
+                          {
+                            "x": 50.4656,
+                            "y": 124.45
+                          },
+                          {
+                            "x": 76.5638,
+                            "y": 102.009
+                          },
+                          {
+                            "x": 107.812,
+                            "y": 93.7916
+                          },
+                          {
+                            "x": 148.397,
+                            "y": 87.2443
+                          },
+                          {
+                            "x": 191.562,
+                            "y": 98.5319
+                          },
+                          {
+                            "x": 223.831,
+                            "y": 129.834
+                          },
+                          {
+                            "x": 234.996,
+                            "y": 167.298
+                          },
+                          {
+                            "x": 247.071,
+                            "y": 202.076
+                          }
+                        ]
+                      ]
                     },
                     {
-                      "hasCustomCollisionMask": false,
+                      "hasCustomCollisionMask": true,
                       "image": "snowball_062.png",
                       "points": [],
                       "originPoint": {
@@ -1552,7 +2672,78 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 233.809,
+                            "y": 266.837
+                          },
+                          {
+                            "x": 203.87,
+                            "y": 297.475
+                          },
+                          {
+                            "x": 175.826,
+                            "y": 307.709
+                          },
+                          {
+                            "x": 144.965,
+                            "y": 320.704
+                          },
+                          {
+                            "x": 96.6122,
+                            "y": 316.24
+                          },
+                          {
+                            "x": 51.7,
+                            "y": 290.792
+                          },
+                          {
+                            "x": 22.4528,
+                            "y": 251.373
+                          },
+                          {
+                            "x": 17.5679,
+                            "y": 188.437
+                          },
+                          {
+                            "x": 35.2289,
+                            "y": 156.583
+                          },
+                          {
+                            "x": 50.4656,
+                            "y": 124.45
+                          },
+                          {
+                            "x": 76.5638,
+                            "y": 102.009
+                          },
+                          {
+                            "x": 107.812,
+                            "y": 93.7916
+                          },
+                          {
+                            "x": 148.397,
+                            "y": 87.2443
+                          },
+                          {
+                            "x": 191.562,
+                            "y": 98.5319
+                          },
+                          {
+                            "x": 223.831,
+                            "y": 129.834
+                          },
+                          {
+                            "x": 234.996,
+                            "y": 167.298
+                          },
+                          {
+                            "x": 247.071,
+                            "y": 202.076
+                          }
+                        ]
+                      ]
                     }
                   ]
                 }
@@ -1568,7 +2759,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "Variables",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -1585,7 +2776,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Variables:\n\nobstacleDirection: degree that the global force is applied to (270 degrees = up).\nobstacleSpeed: speed at which obstacles go up.\nsizeDecrease: how much to subtact from the scale of the snowball when it collides.\nsizeIncrease: how much to add to the scale of the snowball as the game goes on.\nspeedIncrease: how much to add to the speed of the snowball as the game goes on.\nspeedDecrease: how much to subtract to the speed of the snowball when it collides.\nscore: keeps track of the player's points\nsnowballSpeed: how fast the snowball goes\nstate: 0 = Game hasn't started, 1 = Game in action, 2 = Game over\ninvincibility: toggles if snowball can collide with objects or not - for DevControls. 0 = Disabled 1 = Enabled\ninvinciblityStateChanged: keeps track of if DevControls are enabled",
+              "comment": "Variables:\n\nGLOBAL: \nscore: keeps track of the player's points\n\nLOCAL:\nobstacleDirection: degree that the global force is applied to (270 degrees = up).\nobstacleSpeed: speed at which obstacles go up.\nsizeDecrease: how much to subtact from the scale of the snowball when it collides.\nsizeIncrease: how much to add to the scale of the snowball as the game goes on.\nspeedIncrease: how much to add to the speed of the snowball as the game goes on.\nspeedDecrease: how much to subtract to the speed of the snowball when it collides.\nsnowballSpeed: how fast the snowball goes\nstate: 0 = Game hasn't started, 1 = Game in action\ninvincibility: toggles if snowball can collide with objects or not - for DevControls. 0 = Disabled 1 = Enabled\ninvinciblityStateChanged: keeps track of if DevControls are enabled",
               "comment2": ""
             },
             {
@@ -1659,18 +2850,6 @@
                     "value": "ModVarScene"
                   },
                   "parameters": [
-                    "score",
-                    "=",
-                    "0"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarScene"
-                  },
-                  "parameters": [
                     "state",
                     "=",
                     "0"
@@ -1732,6 +2911,18 @@
                   },
                   "parameters": [
                     "invincibilityStateChanged",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarGlobal"
+                  },
+                  "parameters": [
+                    "score",
                     "=",
                     "0"
                   ],
@@ -1814,7 +3005,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "Game States",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -1831,7 +3022,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Pressing Enter starts the game.",
+              "comment": "Pressing Space starts the game.",
               "comment2": ""
             },
             {
@@ -1858,7 +3049,7 @@
                   },
                   "parameters": [
                     "",
-                    "Return"
+                    "Space"
                   ],
                   "subInstructions": []
                 }
@@ -1888,171 +3079,6 @@
                 }
               ],
               "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Game over shows the final score.\nDisables snowball movement.",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "VarScene"
-                  },
-                  "parameters": [
-                    "state",
-                    "=",
-                    "2"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Cache"
-                  },
-                  "parameters": [
-                    "PressEnterToBeginText"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Montre"
-                  },
-                  "parameters": [
-                    "GameOverText",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Montre"
-                  },
-                  "parameters": [
-                    "FinalScoreText",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Cache"
-                  },
-                  "parameters": [
-                    "ScoreText"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "MettreXY"
-                  },
-                  "parameters": [
-                    "ScoreNum",
-                    "=",
-                    "430",
-                    "=",
-                    "288"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ActivateBehavior"
-                  },
-                  "parameters": [
-                    "Snowball",
-                    "TopDownMovement",
-                    "no"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "At game over, pressing Space restarts the game.",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "VarScene"
-                  },
-                  "parameters": [
-                    "state",
-                    "=",
-                    "2\n\n"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "KeyPressed"
-                  },
-                  "parameters": [
-                    "",
-                    "Return"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Scene"
-                  },
-                  "parameters": [
-                    "",
-                    "\"FirstLevel\"",
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
             }
           ],
           "parameters": []
@@ -2063,7 +3089,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "Gameplay",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -2163,7 +3189,7 @@
                         "textG": 0,
                         "textR": 0
                       },
-                      "comment": "If the snowball collides with any obstaces, it decreases in size and you lose points. Only collides as long as DevControls aren't enabled.",
+                      "comment": "If the snowball collides with any obstacles, it decreases in size and you lose points. Only collides as long as DevControls aren't enabled.",
                       "comment2": ""
                     },
                     {
@@ -2237,7 +3263,7 @@
                         {
                           "type": {
                             "inverted": false,
-                            "value": "ModVarScene"
+                            "value": "ModVarGlobal"
                           },
                           "parameters": [
                             "score",
@@ -2449,7 +3475,7 @@
                           "parameters": [
                             "ScoreNum",
                             "=",
-                            "ToString(Variable(score))"
+                            "ToString(GlobalVariable(score))"
                           ],
                           "subInstructions": []
                         },
@@ -2480,7 +3506,7 @@
                         {
                           "type": {
                             "inverted": false,
-                            "value": "ModVarScene"
+                            "value": "ModVarGlobal"
                           },
                           "parameters": [
                             "score",
@@ -2562,12 +3588,12 @@
                         {
                           "type": {
                             "inverted": false,
-                            "value": "ModVarScene"
+                            "value": "Scene"
                           },
                           "parameters": [
-                            "state",
-                            "=",
-                            "2"
+                            "",
+                            "\"GameOver\"",
+                            ""
                           ],
                           "subInstructions": []
                         }
@@ -2588,7 +3614,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "Developer Controls",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -2892,8 +3918,8 @@
     {
       "b": 209,
       "disableInputWhenNotFocused": true,
-      "mangledName": "Opening",
-      "name": "Opening",
+      "mangledName": "GameOver",
+      "name": "GameOver",
       "oglFOV": 90,
       "oglZFar": 500,
       "oglZNear": 1,
@@ -2930,638 +3956,6 @@
           "layer": "",
           "locked": false,
           "name": "SnowBackground",
-          "persistentUuid": "43902eac-0957-4e8e-ad4f-2252dd2371c7",
-          "width": 800,
-          "x": 0,
-          "y": 0,
-          "zOrder": 0,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "GameTitle",
-          "persistentUuid": "7f7beb53-5da6-45c8-8db5-18a6e6a199a4",
-          "width": 0,
-          "x": 237,
-          "y": 164,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "Options",
-          "persistentUuid": "1755e8bb-43ee-483d-b558-1cbc42fa2234",
-          "width": 0,
-          "x": 366,
-          "y": 265,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "SignArrowPlay",
-          "persistentUuid": "44367221-aa15-44d0-aa94-9c6b7102860f",
-          "width": 0,
-          "x": 312,
-          "y": 260,
-          "zOrder": 5,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "SignArrowExit",
-          "persistentUuid": "f41a8cd5-c80d-49a6-b9ca-15658ba0cc82",
-          "width": 0,
-          "x": 312,
-          "y": 295,
-          "zOrder": 6,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        }
-      ],
-      "objects": [
-        {
-          "bold": true,
-          "italic": false,
-          "name": "GameTitle",
-          "smoothed": true,
-          "tags": "",
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "behaviors": [],
-          "string": "Snowball Frenzy",
-          "font": "",
-          "characterSize": 40,
-          "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
-          }
-        },
-        {
-          "bold": false,
-          "italic": false,
-          "name": "Options",
-          "smoothed": true,
-          "tags": "",
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "behaviors": [],
-          "string": "Play\nExit",
-          "font": "",
-          "characterSize": 30,
-          "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
-          }
-        },
-        {
-          "name": "SignArrowExit",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "SignArrow",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "assets/SignArrow2.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "SignArrowPlay",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "SignArrow",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "assets/SignArrow2.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "events": [
-        {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "disabled": false,
-          "folded": false,
-          "name": "Variables",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "optionSelected: keeps track if player is hovering over play (0) or exit (1)",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "DepartScene"
-                  },
-                  "parameters": [
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Cache"
-                  },
-                  "parameters": [
-                    "SignArrowExit"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarScene"
-                  },
-                  "parameters": [
-                    "exitSelected",
-                    "=",
-                    "0"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            }
-          ],
-          "parameters": []
-        },
-        {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "disabled": false,
-          "folded": false,
-          "name": "Game States",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Toggles the sign arrow in accordance to the keyboard input",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "KeyPressed"
-                  },
-                  "parameters": [
-                    "",
-                    "Down"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": [],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Cache"
-                  },
-                  "parameters": [
-                    "SignArrowPlay"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Montre"
-                  },
-                  "parameters": [
-                    "SignArrowExit",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarScene"
-                  },
-                  "parameters": [
-                    "exitSelected",
-                    "=",
-                    "1"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "KeyPressed"
-                  },
-                  "parameters": [
-                    "",
-                    "Up"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": [],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Montre"
-                  },
-                  "parameters": [
-                    "SignArrowPlay",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Cache"
-                  },
-                  "parameters": [
-                    "SignArrowExit"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarScene"
-                  },
-                  "parameters": [
-                    "exitSelected",
-                    "=",
-                    "0"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Starts the game and changes scene to FirstLevel",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "BuiltinCommonInstructions::And"
-                  },
-                  "parameters": [],
-                  "subInstructions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "VarScene"
-                      },
-                      "parameters": [
-                        "exitSelected",
-                        "=",
-                        "0"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "KeyPressed"
-                      },
-                      "parameters": [
-                        "",
-                        "Space"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "KeyReleased"
-                      },
-                      "parameters": [
-                        "",
-                        "Space"
-                      ],
-                      "subInstructions": []
-                    }
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Scene"
-                  },
-                  "parameters": [
-                    "",
-                    "\"FirstLevel\"",
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Quits the game",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "BuiltinCommonInstructions::And"
-                  },
-                  "parameters": [],
-                  "subInstructions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "VarScene"
-                      },
-                      "parameters": [
-                        "exitSelected",
-                        "=",
-                        "1"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "KeyPressed"
-                      },
-                      "parameters": [
-                        "",
-                        "Space"
-                      ],
-                      "subInstructions": []
-                    }
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Quit"
-                  },
-                  "parameters": [
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            }
-          ],
-          "parameters": []
-        }
-      ],
-      "layers": [
-        {
-          "ambientLightColorB": 7893136,
-          "ambientLightColorG": 7893648,
-          "ambientLightColorR": 7881008,
-          "followBaseLayerCamera": false,
-          "isLightingLayer": false,
-          "name": "",
-          "visibility": true,
-          "cameras": [
-            {
-              "defaultSize": true,
-              "defaultViewport": true,
-              "height": 0,
-              "viewportBottom": 1,
-              "viewportLeft": 0,
-              "viewportRight": 1,
-              "viewportTop": 0,
-              "width": 0
-            }
-          ],
-          "effects": []
-        }
-      ],
-      "behaviorsSharedData": [
-        {
-          "name": "TopDownMovement",
-          "type": "TopDownMovementBehavior::TopDownMovementBehavior"
-        }
-      ]
-    },
-    {
-      "b": 209,
-      "disableInputWhenNotFocused": true,
-      "mangledName": "GameOver",
-      "name": "GameOver",
-      "oglFOV": 90,
-      "oglZFar": 500,
-      "oglZNear": 1,
-      "r": 209,
-      "standardSortMethod": true,
-      "stopSoundsOnStartup": true,
-      "title": "",
-      "v": 209,
-      "uiSettings": {
-        "grid": false,
-        "gridB": 255,
-        "gridG": 180,
-        "gridHeight": 32,
-        "gridOffsetX": 0,
-        "gridOffsetY": 0,
-        "gridR": 158,
-        "gridWidth": 32,
-        "snap": true,
-        "windowMask": false,
-        "zoomFactor": 0.8
-      },
-      "objectsGroups": [],
-      "variables": [],
-      "instances": [
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 600,
-          "layer": "",
-          "locked": false,
-          "name": "SnowBackground",
           "persistentUuid": "d64249fa-623a-40aa-bad7-d3eca782f0d0",
           "width": 800,
           "x": 0,
@@ -3580,8 +3974,8 @@
           "name": "GameOverText",
           "persistentUuid": "a3fafa5f-6ffd-4055-9444-5175abd5e465",
           "width": 0,
-          "x": 276,
-          "y": 189,
+          "x": 170,
+          "y": 155,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -3680,12 +4074,12 @@
           "variables": [],
           "behaviors": [],
           "string": "Game Over!",
-          "font": "",
-          "characterSize": 40,
+          "font": "Heavitas.ttf",
+          "characterSize": 70,
           "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
+            "b": 174,
+            "g": 216,
+            "r": 130
           }
         },
         {
@@ -3826,12 +4220,376 @@
       ],
       "events": [
         {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
           "disabled": false,
           "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
-          "events": []
+          "name": "Variables",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "exitSelected: keeps track if player is hovering over restart (0) or exit (1)",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "DepartScene"
+                  },
+                  "parameters": [
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "SignArrowExit"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "exitSelected",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "ScoreText",
+                    "=",
+                    "ToString(GlobalVariable(score))"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "disabled": false,
+          "folded": false,
+          "name": "Game States",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Toggles the sign arrow in accordance to the keyboard input",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "Down"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": [],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "SignArrowRestart"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "SignArrowExit",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "exitSelected",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "Up"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": [],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "SignArrowExit"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "SignArrowRestart",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "exitSelected",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Restarts the game and changes scene to FirstLevel",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::And"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "exitSelected",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "KeyPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "Return"
+                      ],
+                      "subInstructions": []
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Play\"",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Quits the game",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::And"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "exitSelected",
+                        "=",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "KeyPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "Return"
+                      ],
+                      "subInstructions": []
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Quit"
+                  },
+                  "parameters": [
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ],
+          "parameters": []
         }
       ],
       "layers": [
