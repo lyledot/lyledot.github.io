@@ -650,15 +650,6 @@
         "name": "assets/Tree (2).png",
         "smoothed": true,
         "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "settings_cog.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "settings_cog.png",
-        "smoothed": true,
-        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -755,7 +746,7 @@
           "height": 0,
           "layer": "",
           "locked": false,
-          "name": "PlayText",
+          "name": "Options",
           "persistentUuid": "1755e8bb-43ee-483d-b558-1cbc42fa2234",
           "width": 0,
           "x": 395,
@@ -844,22 +835,6 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "ExitText",
-          "persistentUuid": "347216d5-5f9a-455d-8b34-8a456ad6ec45",
-          "width": 0,
-          "x": 395,
-          "y": 355,
-          "zOrder": 9,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
         }
       ],
       "objects": [
@@ -885,33 +860,14 @@
         {
           "bold": false,
           "italic": false,
-          "name": "PlayText",
+          "name": "Options",
           "smoothed": true,
           "tags": "",
           "type": "TextObject::Text",
           "underlined": false,
           "variables": [],
           "behaviors": [],
-          "string": "Play",
-          "font": "",
-          "characterSize": 30,
-          "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
-          }
-        },
-        {
-          "bold": false,
-          "italic": false,
-          "name": "ExitText",
-          "smoothed": true,
-          "tags": "",
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "behaviors": [],
-          "string": "Exit",
+          "string": "Play\nExit",
           "font": "",
           "characterSize": 30,
           "color": {
@@ -1055,45 +1011,6 @@
               ]
             }
           ]
-        },
-        {
-          "name": "SettingsButton",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "settings_cog.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
         }
       ],
       "events": [
@@ -1202,61 +1119,21 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "BuiltinCommonInstructions::Or"
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "Down"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::Once"
                   },
                   "parameters": [],
-                  "subInstructions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "BuiltinCommonInstructions::And"
-                      },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "KeyPressed"
-                          },
-                          "parameters": [
-                            "",
-                            "Down"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "BuiltinCommonInstructions::Once"
-                          },
-                          "parameters": [],
-                          "subInstructions": []
-                        }
-                      ]
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "BuiltinCommonInstructions::And"
-                      },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "SourisSurObjet"
-                          },
-                          "parameters": [
-                            "ExitText",
-                            "Left",
-                            "",
-                            ""
-                          ],
-                          "subInstructions": []
-                        }
-                      ]
-                    }
-                  ]
+                  "subInstructions": []
                 }
               ],
               "actions": [
@@ -1304,61 +1181,21 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "BuiltinCommonInstructions::Or"
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "Up"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::Once"
                   },
                   "parameters": [],
-                  "subInstructions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "BuiltinCommonInstructions::And"
-                      },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "KeyPressed"
-                          },
-                          "parameters": [
-                            "",
-                            "Up"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "BuiltinCommonInstructions::Once"
-                          },
-                          "parameters": [],
-                          "subInstructions": []
-                        }
-                      ]
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "BuiltinCommonInstructions::And"
-                      },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "SourisSurObjet"
-                          },
-                          "parameters": [
-                            "PlayText",
-                            "Left",
-                            "",
-                            ""
-                          ],
-                          "subInstructions": []
-                        }
-                      ]
-                    }
-                  ]
+                  "subInstructions": []
                 }
               ],
               "actions": [
@@ -1410,7 +1247,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Starts the game and changes scene to the game. Allows for mouse control as well.",
+              "comment": "Starts the game and changes scene to FirstLevel",
               "comment2": ""
             },
             {
@@ -1421,74 +1258,32 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "BuiltinCommonInstructions::Or"
+                    "value": "BuiltinCommonInstructions::And"
                   },
                   "parameters": [],
                   "subInstructions": [
                     {
                       "type": {
                         "inverted": false,
-                        "value": "BuiltinCommonInstructions::And"
+                        "value": "VarScene"
                       },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "VarScene"
-                          },
-                          "parameters": [
-                            "exitSelected",
-                            "=",
-                            "0"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "KeyPressed"
-                          },
-                          "parameters": [
-                            "",
-                            "Return"
-                          ],
-                          "subInstructions": []
-                        }
-                      ]
+                      "parameters": [
+                        "exitSelected",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
                     },
                     {
                       "type": {
                         "inverted": false,
-                        "value": "BuiltinCommonInstructions::And"
+                        "value": "KeyPressed"
                       },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "SourisSurObjet"
-                          },
-                          "parameters": [
-                            "PlayText",
-                            "Left",
-                            "",
-                            ""
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "MouseButtonReleased"
-                          },
-                          "parameters": [
-                            "",
-                            "Left"
-                          ],
-                          "subInstructions": []
-                        }
-                      ]
+                      "parameters": [
+                        "",
+                        "Return"
+                      ],
+                      "subInstructions": []
                     }
                   ]
                 }
@@ -1532,74 +1327,32 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "BuiltinCommonInstructions::Or"
+                    "value": "BuiltinCommonInstructions::And"
                   },
                   "parameters": [],
                   "subInstructions": [
                     {
                       "type": {
                         "inverted": false,
-                        "value": "BuiltinCommonInstructions::And"
+                        "value": "VarScene"
                       },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "VarScene"
-                          },
-                          "parameters": [
-                            "exitSelected",
-                            "=",
-                            "1"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "KeyPressed"
-                          },
-                          "parameters": [
-                            "",
-                            "Return"
-                          ],
-                          "subInstructions": []
-                        }
-                      ]
+                      "parameters": [
+                        "exitSelected",
+                        "=",
+                        "1"
+                      ],
+                      "subInstructions": []
                     },
                     {
                       "type": {
                         "inverted": false,
-                        "value": "BuiltinCommonInstructions::And"
+                        "value": "KeyPressed"
                       },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "SourisSurObjet"
-                          },
-                          "parameters": [
-                            "ExitText",
-                            "Left",
-                            "",
-                            ""
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "MouseButtonReleased"
-                          },
-                          "parameters": [
-                            "",
-                            "Left"
-                          ],
-                          "subInstructions": []
-                        }
-                      ]
+                      "parameters": [
+                        "",
+                        "Return"
+                      ],
+                      "subInstructions": []
                     }
                   ]
                 }
@@ -3336,7 +3089,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "Gameplay",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -3861,7 +3614,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "Developer Controls",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -3902,12 +3655,12 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "Scene"
+                    "value": "ModVarScene"
                   },
                   "parameters": [
-                    "",
-                    "\"GameOver\"",
-                    ""
+                    "state",
+                    "=",
+                    "2"
                   ],
                   "subInstructions": []
                 }
@@ -4234,10 +3987,10 @@
           "height": 0,
           "layer": "",
           "locked": false,
-          "name": "RestartText",
+          "name": "Options",
           "persistentUuid": "d1ad0304-285e-4016-8b70-bfbf9c806b0c",
           "width": 0,
-          "x": 355,
+          "x": 354,
           "y": 345,
           "zOrder": 3,
           "numberProperties": [],
@@ -4307,22 +4060,6 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "ExitText",
-          "persistentUuid": "24fb9823-ba41-4bd1-8a72-30a515a2bdbb",
-          "width": 0,
-          "x": 355,
-          "y": 380,
-          "zOrder": 8,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
         }
       ],
       "objects": [
@@ -4348,33 +4085,14 @@
         {
           "bold": false,
           "italic": false,
-          "name": "RestartText",
+          "name": "Options",
           "smoothed": true,
           "tags": "",
           "type": "TextObject::Text",
           "underlined": false,
           "variables": [],
           "behaviors": [],
-          "string": "Restart",
-          "font": "",
-          "characterSize": 30,
-          "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
-          }
-        },
-        {
-          "bold": false,
-          "italic": false,
-          "name": "ExitText",
-          "smoothed": true,
-          "tags": "",
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "behaviors": [],
-          "string": "Exit",
+          "string": "Restart\nExit",
           "font": "",
           "characterSize": 30,
           "color": {
@@ -4618,61 +4336,21 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "BuiltinCommonInstructions::Or"
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "Down"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::Once"
                   },
                   "parameters": [],
-                  "subInstructions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "BuiltinCommonInstructions::And"
-                      },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "KeyPressed"
-                          },
-                          "parameters": [
-                            "",
-                            "Down"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "BuiltinCommonInstructions::Once"
-                          },
-                          "parameters": [],
-                          "subInstructions": []
-                        }
-                      ]
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "BuiltinCommonInstructions::And"
-                      },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "SourisSurObjet"
-                          },
-                          "parameters": [
-                            "ExitText",
-                            "Left",
-                            "",
-                            ""
-                          ],
-                          "subInstructions": []
-                        }
-                      ]
-                    }
-                  ]
+                  "subInstructions": []
                 }
               ],
               "actions": [
@@ -4720,61 +4398,21 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "BuiltinCommonInstructions::Or"
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "Up"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::Once"
                   },
                   "parameters": [],
-                  "subInstructions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "BuiltinCommonInstructions::And"
-                      },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "KeyPressed"
-                          },
-                          "parameters": [
-                            "",
-                            "Down"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "BuiltinCommonInstructions::Once"
-                          },
-                          "parameters": [],
-                          "subInstructions": []
-                        }
-                      ]
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "BuiltinCommonInstructions::And"
-                      },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "SourisSurObjet"
-                          },
-                          "parameters": [
-                            "RestartText",
-                            "Left",
-                            "",
-                            ""
-                          ],
-                          "subInstructions": []
-                        }
-                      ]
-                    }
-                  ]
+                  "subInstructions": []
                 }
               ],
               "actions": [
@@ -4837,74 +4475,32 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "BuiltinCommonInstructions::Or"
+                    "value": "BuiltinCommonInstructions::And"
                   },
                   "parameters": [],
                   "subInstructions": [
                     {
                       "type": {
                         "inverted": false,
-                        "value": "BuiltinCommonInstructions::And"
+                        "value": "VarScene"
                       },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "VarScene"
-                          },
-                          "parameters": [
-                            "exitSelected",
-                            "=",
-                            "0"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "KeyPressed"
-                          },
-                          "parameters": [
-                            "",
-                            "Return"
-                          ],
-                          "subInstructions": []
-                        }
-                      ]
+                      "parameters": [
+                        "exitSelected",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
                     },
                     {
                       "type": {
                         "inverted": false,
-                        "value": "BuiltinCommonInstructions::And"
+                        "value": "KeyPressed"
                       },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "SourisSurObjet"
-                          },
-                          "parameters": [
-                            "RestartText",
-                            "Left",
-                            "",
-                            ""
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "MouseButtonReleased"
-                          },
-                          "parameters": [
-                            "",
-                            "Left"
-                          ],
-                          "subInstructions": []
-                        }
-                      ]
+                      "parameters": [
+                        "",
+                        "Return"
+                      ],
+                      "subInstructions": []
                     }
                   ]
                 }
@@ -4948,74 +4544,32 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "BuiltinCommonInstructions::Or"
+                    "value": "BuiltinCommonInstructions::And"
                   },
                   "parameters": [],
                   "subInstructions": [
                     {
                       "type": {
                         "inverted": false,
-                        "value": "BuiltinCommonInstructions::And"
+                        "value": "VarScene"
                       },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "VarScene"
-                          },
-                          "parameters": [
-                            "exitSelected",
-                            "=",
-                            "1"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "KeyPressed"
-                          },
-                          "parameters": [
-                            "",
-                            "Return"
-                          ],
-                          "subInstructions": []
-                        }
-                      ]
+                      "parameters": [
+                        "exitSelected",
+                        "=",
+                        "1"
+                      ],
+                      "subInstructions": []
                     },
                     {
                       "type": {
                         "inverted": false,
-                        "value": "BuiltinCommonInstructions::And"
+                        "value": "KeyPressed"
                       },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "SourisSurObjet"
-                          },
-                          "parameters": [
-                            "ExitText",
-                            "Left",
-                            "",
-                            ""
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "MouseButtonReleased"
-                          },
-                          "parameters": [
-                            "",
-                            "Left"
-                          ],
-                          "subInstructions": []
-                        }
-                      ]
+                      "parameters": [
+                        "",
+                        "Return"
+                      ],
+                      "subInstructions": []
                     }
                   ]
                 }
