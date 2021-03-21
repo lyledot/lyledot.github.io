@@ -5,7 +5,7 @@ CSC3224 - Computer Games Development.<br/>
 A snowball game where you must become as large as possible but avoid obstacles!
 
 <h2>Links</h2>
-Playable here: lyledot.github.io
+Playable here: https://lyledot.github.io/
 
 
 <h3>Asset credits:</h3>
