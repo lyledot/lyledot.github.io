@@ -3,9 +3,12 @@ Landing page for CSC3224 - Computer Games Development.
 A snowball game where you must be as large as possible but avoid obstacles!
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Playable on: https://lyledot.github.io
 
 
+=======
+>>>>>>> parent of 186c053 (Update README.md)
 Asset credits:
 
 =======
