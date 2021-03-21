@@ -699,16 +699,6 @@
           ]
         }
       ]
-    },
-    {
-      "height": 32,
-      "name": "SnowBackground",
-      "tags": "",
-      "texture": "SnowBG-1.png",
-      "type": "TiledSpriteObject::TiledSprite",
-      "width": 32,
-      "variables": [],
-      "behaviors": []
     }
   ],
   "objectsGroups": [],
@@ -1143,6 +1133,16 @@
       ],
       "objects": [
         {
+          "height": 32,
+          "name": "SnowBackground",
+          "tags": "",
+          "texture": "SnowBG-1.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 32,
+          "variables": [],
+          "behaviors": []
+        },
+        {
           "name": "GameBarrier",
           "tags": "",
           "type": "Sprite",
@@ -1364,11 +1364,11 @@
               "useMultipleDirections": false,
               "directions": [
                 {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
+                  "looping": true,
+                  "timeBetweenFrames": 0.025,
                   "sprites": [
                     {
-                      "hasCustomCollisionMask": false,
+                      "hasCustomCollisionMask": true,
                       "image": "White tree (2).png",
                       "points": [],
                       "originPoint": {
@@ -1382,7 +1382,30 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 102.945,
+                            "y": 171.722
+                          },
+                          {
+                            "x": 201.177,
+                            "y": 352.201
+                          },
+                          {
+                            "x": 146.735,
+                            "y": 379.142
+                          },
+                          {
+                            "x": 47.1359,
+                            "y": 372.671
+                          },
+                          {
+                            "x": -2.08649,
+                            "y": 354.523
+                          }
+                        ]
+                      ]
                     }
                   ]
                 }
@@ -2823,68 +2846,6 @@
           "name": "Platform",
           "type": "PlatformBehavior::PlatformBehavior"
         },
-        {
-          "name": "TopDownMovement",
-          "type": "TopDownMovementBehavior::TopDownMovementBehavior"
-        }
-      ]
-    },
-    {
-      "b": 209,
-      "disableInputWhenNotFocused": true,
-      "mangledName": "Opening",
-      "name": "Opening",
-      "oglFOV": 90,
-      "oglZFar": 500,
-      "oglZNear": 1,
-      "r": 209,
-      "standardSortMethod": true,
-      "stopSoundsOnStartup": true,
-      "title": "",
-      "v": 209,
-      "uiSettings": {
-        "grid": false,
-        "gridB": 255,
-        "gridG": 180,
-        "gridHeight": 32,
-        "gridOffsetX": 0,
-        "gridOffsetY": 0,
-        "gridR": 158,
-        "gridWidth": 32,
-        "snap": true,
-        "windowMask": false,
-        "zoomFactor": 0.8
-      },
-      "objectsGroups": [],
-      "variables": [],
-      "instances": [],
-      "objects": [],
-      "events": [],
-      "layers": [
-        {
-          "ambientLightColorB": 7893136,
-          "ambientLightColorG": 7893648,
-          "ambientLightColorR": 7881008,
-          "followBaseLayerCamera": false,
-          "isLightingLayer": false,
-          "name": "",
-          "visibility": true,
-          "cameras": [
-            {
-              "defaultSize": true,
-              "defaultViewport": true,
-              "height": 0,
-              "viewportBottom": 1,
-              "viewportLeft": 0,
-              "viewportRight": 1,
-              "viewportTop": 0,
-              "width": 0
-            }
-          ],
-          "effects": []
-        }
-      ],
-      "behaviorsSharedData": [
         {
           "name": "TopDownMovement",
           "type": "TopDownMovementBehavior::TopDownMovementBehavior"

@@ -7,7 +7,7 @@
     "revision": 0
   },
   "properties": {
-    "adaptGameResolutionAtRuntime": false,
+    "adaptGameResolutionAtRuntime": true,
     "folderProject": false,
     "orientation": "landscape",
     "packageName": "com.example.gamename",
@@ -306,9 +306,9 @@
       "variables": [],
       "behaviors": [
         {
+          "ignoreDefaultControls": true,
           "name": "TopDownMovement",
           "type": "TopDownMovementBehavior::TopDownMovementBehavior",
-          "ignoreDefaultControls": false,
           "acceleration": 400,
           "allowDiagonals": true,
           "angleOffset": 0,
@@ -699,16 +699,6 @@
           ]
         }
       ]
-    },
-    {
-      "height": 32,
-      "name": "SnowBackground",
-      "tags": "",
-      "texture": "SnowBG-1.png",
-      "type": "TiledSpriteObject::TiledSprite",
-      "width": 32,
-      "variables": [],
-      "behaviors": []
     }
   ],
   "objectsGroups": [],
@@ -1142,6 +1132,16 @@
         }
       ],
       "objects": [
+        {
+          "height": 32,
+          "name": "SnowBackground",
+          "tags": "",
+          "texture": "SnowBG-1.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 32,
+          "variables": [],
+          "behaviors": []
+        },
         {
           "name": "GameBarrier",
           "tags": "",
@@ -2040,7 +2040,7 @@
             },
             {
               "disabled": false,
-              "folded": false,
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -2370,7 +2370,7 @@
                   "colorR": 74,
                   "creationTime": 0,
                   "disabled": false,
-                  "folded": false,
+                  "folded": true,
                   "name": "Snowball Mechanics",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -2777,14 +2777,6 @@
             }
           ],
           "parameters": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
-          "events": []
         }
       ],
       "layers": [
@@ -2846,68 +2838,6 @@
           "name": "Platform",
           "type": "PlatformBehavior::PlatformBehavior"
         },
-        {
-          "name": "TopDownMovement",
-          "type": "TopDownMovementBehavior::TopDownMovementBehavior"
-        }
-      ]
-    },
-    {
-      "b": 209,
-      "disableInputWhenNotFocused": true,
-      "mangledName": "Opening",
-      "name": "Opening",
-      "oglFOV": 90,
-      "oglZFar": 500,
-      "oglZNear": 1,
-      "r": 209,
-      "standardSortMethod": true,
-      "stopSoundsOnStartup": true,
-      "title": "",
-      "v": 209,
-      "uiSettings": {
-        "grid": false,
-        "gridB": 255,
-        "gridG": 180,
-        "gridHeight": 32,
-        "gridOffsetX": 0,
-        "gridOffsetY": 0,
-        "gridR": 158,
-        "gridWidth": 32,
-        "snap": true,
-        "windowMask": false,
-        "zoomFactor": 1
-      },
-      "objectsGroups": [],
-      "variables": [],
-      "instances": [],
-      "objects": [],
-      "events": [],
-      "layers": [
-        {
-          "ambientLightColorB": 7893136,
-          "ambientLightColorG": 7893648,
-          "ambientLightColorR": 7881008,
-          "followBaseLayerCamera": false,
-          "isLightingLayer": false,
-          "name": "",
-          "visibility": true,
-          "cameras": [
-            {
-              "defaultSize": true,
-              "defaultViewport": true,
-              "height": 0,
-              "viewportBottom": 1,
-              "viewportLeft": 0,
-              "viewportRight": 1,
-              "viewportTop": 0,
-              "width": 0
-            }
-          ],
-          "effects": []
-        }
-      ],
-      "behaviorsSharedData": [
         {
           "name": "TopDownMovement",
           "type": "TopDownMovementBehavior::TopDownMovementBehavior"
